@@ -24,6 +24,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.author = current_user
     @article.save
     respond_with(@article)
   end
@@ -44,6 +45,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:author, :title, :content)
+      params.require(:article).permit(:title, :content)
     end
 end
