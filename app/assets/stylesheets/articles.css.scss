@@ -1,3 +1,34 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.articleInfo{
+  margin-bottom: 20px;
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+.articleInfoSingle{
+  margin-bottom: 0px;
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+.articleDate{
+  margin-left: 15px;
+}
+
+.articleBody p{
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+.articleButtons{
+  margin-left: 15px;
+  margin-bottom: 60px;
+}
+
+#bodyEnd{
+  margin-bottom: 150px;
+}
