@@ -10,9 +10,11 @@
 <div class="articleButtons">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               articles_path, :class => 'btn btn-default'  %>
-  <% if current_user_is_mod_or_admin? %>
+  <% if can? :edit, @article %>
     <%= link_to t('.edit', :default => t("helpers.links.edit")),
                 edit_article_path(@article), :class => 'btn btn-default' %>
+  <% end %>
+  <% if can? :destroy, @article %>
     <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                 article_path(@article),
                 :method => 'delete',

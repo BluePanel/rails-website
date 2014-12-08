@@ -12,15 +12,19 @@
         <div class="articleInfo" > <span class="articleAuthor" ><%= article.author.name %></span> <span class="articleDate" ><%= article.created_at.strftime("%d, %b %Y - %H:%M") %></span> </div>
         <p><%= article.content %></p>
       </div>
-      <% if current_user_is_mod_or_admin? %>
+      <% if can? (:edit || :destroy), article %>
         <div class="articleButtons">
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_article_path(article), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      article_path(article),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
+          <% if can? :edit, article %>
+            <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                        edit_article_path(article), :class => 'btn btn-default btn-xs' %>
+          <% end %>
+          <% if can? :destroy, article %>
+            <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                        article_path(article),
+                        :method => :delete,
+                        :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                        :class => 'btn btn-xs btn-danger' %>
+          <% end %>
         </div>
       <% end %>
     <% else %>
@@ -29,22 +33,26 @@
         <div class="articleInfo" > <span class="articleAuthor" ><%= article.author.name %></span> <span class="articleDate"><%= article.created_at.strftime("%d, %b %Y - %H:%M") %></span> </div>
         <p><%= article.content %></p>
       </div>
-      <% if current_user_is_mod_or_admin? %>
+      <% if can? (:edit || :destroy), article %>
         <div class="articleButtons">
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_article_path(article), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      article_path(article),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
+          <% if can? :edit, article %>
+            <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                        edit_article_path(article), :class => 'btn btn-default btn-xs' %>
+          <% end %>
+          <% if can? :destroy, article %>
+            <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                        article_path(article),
+                        :method => :delete,
+                        :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                        :class => 'btn btn-xs btn-danger' %>
+          <% end %>
         </div>
       <% end %>
     <% end %>
   <% end %>
 </section>
 
-<% if current_user_is_mod_or_admin? %>
+<% if can? :create, Article %>
   <%= link_to t('.new', :default => t("helpers.links.new")),
               new_article_path,
               :class => 'btn btn-primary' %>
