@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'about' => 'about#show'
+
   resources :articles
 
   get 'home/index'
