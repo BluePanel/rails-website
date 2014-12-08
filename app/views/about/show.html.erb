@@ -1,2 +1,30 @@
-<h1>About#show</h1>
-<p>Find me in app/views/about/show.html.erb</p>
+<div class="page-header">
+  <h1><%=t '.title', :default => 'About' %></h1>
+</div>
+
+<div class="adminList">
+  <h2>Administrators</h2>
+  <% @admins.each do |admin| %>
+      <div class="admin">
+        <%= admin.name %>, Contact: <%= admin.email %>
+      </div>
+  <% end %>
+</div>
+
+<div class="modList">
+  <h2>Global Moderators</h2>
+  <% @mods.each do |mod| %>
+      <div class="mod">
+        <%= mod.name %>, Contact: <%= mod.email %>
+      </div>
+  <% end %>
+</div>
+
+<div class="developerList">
+  <h2>Developers</h2>
+  <% @team.each do |member| %>
+    <div class="developer">
+      <%= member.name %>, Contact: <%= member.email %>
+    </div>
+  <% end %>
+</div>
