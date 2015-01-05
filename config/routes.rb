@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     get 'about' => 'about#show'
 
     resources :articles
+    resources :projects
 
     get 'home/index'
     get '/:locale' => 'home#index'
