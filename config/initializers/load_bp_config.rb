@@ -1,0 +1,1 @@
+BP_CONFIG = YAML.load_file(Rails.root.join('config/bp_config.yml'))[Rails.env]
