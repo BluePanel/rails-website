@@ -1,18 +1,12 @@
 <%- model_class = Project -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1><%= @project.name %></h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @project.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @project.description %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:description_de) %>:</strong></dt>
-  <dd><%= @project.description_de %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:link) %>:</strong></dt>
-  <dd><%= @project.link %></dd>
-</dl>
+<div class="project-section">
+  <p><%= @project.localized_description %></p>
+  <p>Project on Github: <%= link_to @project.name, @project.link %></p>
+</div>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               projects_path, :class => 'btn btn-default'  %>
