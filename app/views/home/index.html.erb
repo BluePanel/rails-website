@@ -1,3 +1,12 @@
+<h1>Latest Articles</h1>
+<% Article.latest_articles.each do |article| %>
+  <div class="articleBody">
+    <h2><%= link_to article.title, article_path(article) %></h2>
+    <div class="articleInfo" > <span class="articleAuthor" ><%= article.author.name %></span> <span class="articleDate"><%= article.created_at.strftime("%d, %b %Y - %H:%M") %></span> </div>
+    <p><%= article.content_preview %></p>
+  </div>
+<% end %>
+
 <div id="feed"></div>
 <script type="text/javascript">
   GitHubActivity.feed({
