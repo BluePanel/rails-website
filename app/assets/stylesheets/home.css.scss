@@ -1,3 +1,20 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#feed{
+	box-sizing: content-box;
+}
+
+.gha-header{
+	box-sizing: content-box;
+	width: calc(100% - 22px);
+}
+
+.gha-gravatar{
+	box-sizing: content-box;
+}
+
+.gha-footer{
+	box-sizing: content-box;
+}
