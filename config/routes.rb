@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|de/ do
     get '/:locale' => 'home#index'
     root 'home#index'
+    get 'users/sign_up', to: redirect('') unless BP_CONFIG['registration_is_enabled']
 
     devise_for :users
 

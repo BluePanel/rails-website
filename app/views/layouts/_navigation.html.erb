@@ -10,7 +10,7 @@
       <%= menu_item "Edit Profile", edit_user_registration_path %>
       <%= menu_item "Log Out", destroy_user_session_path, :method => :delete %>
     <% else %>
-      <%= menu_item "Sign Up", new_user_registration_path %>
+      <%= menu_item "Sign Up", new_user_registration_path if BP_CONFIG['registration_is_enabled'] %>
       <%= menu_item "Sign In", new_user_session_path %>
     <% end %>
   <% end %>
