@@ -45,3 +45,5 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'cancancan', '~> 1.9'
 gem 'rolify'
+
+gem 'bb-ruby'

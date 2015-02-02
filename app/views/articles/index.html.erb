@@ -10,7 +10,7 @@
       <div class="articleBody">
         <h1><%= link_to article.title, article_path(article) %></h1>
         <div class="articleInfo" > <span class="articleAuthor" ><%= article.author.name %></span> <span class="articleDate" ><%= article.created_at.strftime("%d, %b %Y - %H:%M") %></span> </div>
-        <p><%= article.content %></p>
+        <p><%= raw article.content.bbcode_to_html_with_formatting %></p>
       </div>
       <% if can? (:edit || :destroy), article %>
         <div class="articleButtons">
@@ -31,7 +31,7 @@
       <div class="articleBody">
         <h1><%= link_to article.title, article_path(article) %></h1>
         <div class="articleInfo" > <span class="articleAuthor" ><%= article.author.name %></span> <span class="articleDate"><%= article.created_at.strftime("%d, %b %Y - %H:%M") %></span> </div>
-        <p><%= article.content_preview %></p>
+        <p><%= raw article.content_preview.bbcode_to_html_with_formatting %></p>
       </div>
       <% if can? (:edit || :destroy), article %>
         <div class="articleButtons">

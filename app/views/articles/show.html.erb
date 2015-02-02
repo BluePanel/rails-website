@@ -5,7 +5,7 @@
 </div>
 
 <div class="articleBody">
-  <p><%= @article.content %></p>
+  <p><%= raw @article.content.bbcode_to_html_with_formatting %></p>
 </div>
 <div class="articleButtons">
   <%= link_to t('.back', :default => t("helpers.links.back")),
