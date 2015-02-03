@@ -1,0 +1,18 @@
+language: ruby
+
+rvm:
+  - 2.1.4
+
+gemfile:
+  - Gemfile
+
+sudo: false
+
+script: "bundle exec rake test"
+
+notifications:
+  email:
+    - webdevs@bluepanel.org
+  irc:
+    - "chat.freenode.net#bluepanel"
+  use_notice: true
