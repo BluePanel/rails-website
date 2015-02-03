@@ -11,6 +11,8 @@ notifications:
   irc:
   - chat.freenode.net#bluepanel
   use_notice: true
-env:
-  global:
-    secure: bw92tiahvKL6jGhyqFJe6kPfxsR9Mu5SMOcdTJbx7Wq08M7oNCdlhakcg0hrvA6UdtBjUCQPlgOqBvskKWvW6qQnsQCo+9FoCAxvM+g+x7bBnThGwNXy6aM5Y+4MzubxXVhC4HF7qxWlmLmmS18J+PHtgye8wKFsjm8H0FNlJQE=
+
+addons:
+  code_climate:
+    repo_token:
+      secure: bw92tiahvKL6jGhyqFJe6kPfxsR9Mu5SMOcdTJbx7Wq08M7oNCdlhakcg0hrvA6UdtBjUCQPlgOqBvskKWvW6qQnsQCo+9FoCAxvM+g+x7bBnThGwNXy6aM5Y+4MzubxXVhC4HF7qxWlmLmmS18J+PHtgye8wKFsjm8H0FNlJQE=
