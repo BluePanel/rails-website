@@ -4,7 +4,6 @@ class ProjectsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
-    @request.env["devise.mapping"] = Devise.mappings[:admin]
     @project = projects(:one)
   end
 
