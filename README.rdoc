@@ -3,6 +3,7 @@ Ruby on Rails Project which will be hosted on {BluePanel.org}[http://bluepanel.o
 
 {<img src="https://travis-ci.org/BluePanel/rails-website.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/BluePanel/rails-website]
 {<img src="https://codeclimate.com/github/BluePanel/rails-website/badges/gpa.svg" />}[https://codeclimate.com/github/BluePanel/rails-website]
+{<img src="https://codeclimate.com/github/BluePanel/rails-website/badges/coverage.svg" />}[https://codeclimate.com/github/BluePanel/rails-website]
 
 == System dependencies
 * Ruby 2.1.4
