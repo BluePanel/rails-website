@@ -6,5 +6,5 @@ Ruby on Rails Project which will be hosted on {BluePanel.org}[http://bluepanel.o
 {<img src="https://codeclimate.com/github/BluePanel/rails-website/badges/coverage.svg" />}[https://codeclimate.com/github/BluePanel/rails-website]
 
 == System dependencies
-* Ruby 2.1.4
+* Ruby >= 2.1 (but 2.2 is highly recommended)
 * Rails 4.1.7

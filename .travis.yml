@@ -1,10 +1,17 @@
 language: ruby
 rvm:
-- 2.1.4
+  - 2.1
+  - 2.2
+
 gemfile:
 - Gemfile
+
 sudo: false
+
+cache: bundler
+
 script: bundle exec rake test
+
 notifications:
   email:
   - webdevs@bluepanel.org
