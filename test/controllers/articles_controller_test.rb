@@ -24,7 +24,7 @@ class ArticlesControllerTest < ActionController::TestCase
     login(:admin)
 
     assert_difference('Article.count') do
-      post :create, article: { author: @article.author, content: @article.content, title: @article.title }
+      post :create, article: { locale: @article.locale, author: @article.author, content: @article.content, title: @article.title }
     end
 
     assert_redirected_to article_path(assigns(:article))

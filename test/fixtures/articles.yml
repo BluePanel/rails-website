@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  locale: en
   author: admin
   title: MyString
   content: MyText
 
 two:
+  locale: en
   author: admin
   title: MyString
   content: MyText
