@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   respond_to :html
 
   def index
-    @articles = Article.all
+    @articles = Article.where(:locale => I18n.locale)
     respond_with(@articles)
   end
 
