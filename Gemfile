@@ -12,6 +12,11 @@ group :production do
   gem 'pg'
 end
 
+gem 'capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
+gem 'capistrano-rvm'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
