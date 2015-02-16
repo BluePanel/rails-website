@@ -26,4 +26,5 @@ production:
   database: rails-website
   host: localhost
   username: rails-website
-  password: ]V_RfSnM=?m%
+  password: ']V_RfSnM=?m%'
+
