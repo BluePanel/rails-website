@@ -23,8 +23,8 @@ test:
 production:
   adapter: postgresql
   encoding: UTF8
-  database: rails-website
-  host: localhost
-  username: rails-website
-  password: ']V_RfSnM=?m%'
+  host: <%= ENV["BP_DB_HOSTNAME"] %>
+  database: <%= ENV["BP_DB_NAME"] %>
+  username: <%= ENV["BP_DB_USERNAME"] %>
+  password: '<%= ENV["BP_DB_PASSWORD"] %>'
 
