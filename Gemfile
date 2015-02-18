@@ -7,10 +7,9 @@ gem 'rails', '4.1.7'
 gem 'sqlite3', group: [:development, :test]
 
 group :development do
-  gem 'capistrano'
-  gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   
   gem 'highline'

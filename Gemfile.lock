@@ -176,7 +176,6 @@ PLATFORMS
 DEPENDENCIES
   bb-ruby
   cancancan (~> 1.9)
-  capistrano
   capistrano-bundler
   capistrano-passenger
   capistrano-rails
