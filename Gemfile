@@ -4,8 +4,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 
-group :development, :test do
-  gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
+
+group :development do
   gem 'capistrano'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
@@ -18,7 +19,6 @@ end
 group :production do
   gem 'pg'
 end
-
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
