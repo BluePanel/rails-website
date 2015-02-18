@@ -16,6 +16,6 @@ class Article < ActiveRecord::Base
   end
 
   def self.latest_articles
-    limit(BP_CONFIG['count_of_articles_on_index_page'])
+		where(:locale => I18n.locale).limit(BP_CONFIG['count_of_articles_on_index_page'])
   end
 end
