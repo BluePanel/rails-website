@@ -20,4 +20,57 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 de:
-  hello: "Hallo Welt"
+  navigation:
+    main:
+      home: "Start"
+      articles: "Artikel"
+      projects: "Projekte"
+      about: "Über uns"
+    user:
+      edit_profile: "Profil ändern"
+      sign_out: "Abmelden"
+      sign_up: "Registrieren"
+      sign_in: "Anmelden"
+  home:
+    index:
+      latest_articles: "Neuste Artikel"
+  articles:
+    index:
+      title: "Artikel"
+      edit: "Bearbeiten"
+      translate: "Übersetzen"
+      destroy: "Löschen"
+      new: "Neu"
+    edit:
+      title: "Bearbeite Artikel"
+    new:
+      title: "Neuer Artikel"
+    form:
+      cancel: "Abbrechen"
+  projects:
+    index:
+      title: "Projekte"
+      name: "Name"
+      description: "Beschreibung"
+      link: "Link"
+      actions: "Aktionen"
+      edit: "Bearbeiten"
+      destroy: "Löschen"
+      new: "Neu"
+    show:
+      on_github: "Projekt auf Github:"
+      back: "Zurück"
+      edit: "Bearbeiten"
+      destroy: "Löschen"
+    edit:
+      title: "Bearbeite Projekt"
+    new:
+      title: "Neues Projekt"
+    form:
+      cancel: "Abbrechen"
+  about:
+    show:
+      title: "Über uns"
+      admins: "Administratoren"
+      global_mods: "Globale Moderatoren"
+      developers: "Entwickler"
