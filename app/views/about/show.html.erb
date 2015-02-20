@@ -3,7 +3,7 @@
 </div>
 
 <div class="adminList">
-  <h2>Administrators</h2>
+  <h2><%=t '.admins', :default => 'Administrators' %></h2>
   <% @admins.each do |admin| %>
       <div class="admin">
         <%= admin.name %>, Contact: <%= admin.email %>
@@ -12,7 +12,7 @@
 </div>
 
 <div class="modList">
-  <h2>Global Moderators</h2>
+  <h2><%=t '.global_mods', :default => 'Global Moderators' %></h2>
   <% @mods.each do |mod| %>
       <div class="mod">
         <%= mod.name %>, Contact: <%= mod.email %>
@@ -21,7 +21,7 @@
 </div>
 
 <div class="developerList">
-  <h2>Developers</h2>
+  <h2><%=t '.developers', :default => 'Developers' %></h2>
   <% @team.each do |member| %>
     <div class="developer">
       <%= member.name %>, Contact: <%= member.email %>
