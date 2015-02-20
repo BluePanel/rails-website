@@ -63,3 +63,4 @@ gem 'cancancan', '~> 1.9'
 gem 'rolify'
 
 gem 'bb-ruby'
+gem 'will_paginate-bootstrap'

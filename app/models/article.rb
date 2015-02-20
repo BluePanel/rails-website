@@ -11,6 +11,8 @@ class Article < ActiveRecord::Base
 
   default_scope { order('created_at DESC') }
 
+  self.per_page = BP_CONFIG['articles_per_page']
+
   def content_preview
       content.truncate(BP_CONFIG['article_preview_sign_length'])
   end

@@ -1,7 +1,8 @@
 defaults: &defaults
-  article_preview_sign_length: 1000
-  count_of_articles_on_index_page: 3
   registration_is_enabled: false
+  count_of_articles_on_index_page: 3
+  article_preview_sign_length: 1000
+  articles_per_page: 10
 
 development:
   <<: *defaults
@@ -13,3 +14,4 @@ test:
 
 production:
   <<: *defaults
+
