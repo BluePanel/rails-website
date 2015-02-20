@@ -5,7 +5,7 @@
 
 <div class="project-section">
   <p><%= @project.localized_description %></p>
-  <p>Project on Github: <%= link_to @project.name, @project.link %></p>
+  <p><%=t '.on_github', :default => 'Project on Github' %> <%= link_to @project.name, @project.link %></p>
 </div>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
