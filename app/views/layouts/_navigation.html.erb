@@ -13,5 +13,8 @@
       <%= menu_item "Sign Up", new_user_registration_path if BP_CONFIG['registration_is_enabled'] %>
       <%= menu_item "Sign In", new_user_session_path %>
     <% end %>
+    <p class="navbar-right">
+      <%= link_to "en", params.merge(locale: :en) %> | <%= link_to "de", params.merge(locale: :de) %>
+    </p>
   <% end %>
 <% end %>
