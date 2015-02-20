@@ -1,17 +1,17 @@
 <%= nav_bar :responsive => true, :brand => image_tag('bluepanel-small-logo-light-e.png') do %>
   <%= menu_group do %>
-    <%= menu_item "Home", home_path %>
-    <%= menu_item "Articles", articles_path %>
-    <%= menu_item "Projects", projects_path %>
-    <%= menu_item "About", about_path %>
+    <%= menu_item t('navigation.main.home'), home_path %>
+    <%= menu_item t('navigation.main.articles'), articles_path %>
+    <%= menu_item t('navigation.main.projects'), projects_path %>
+    <%= menu_item t('navigation.main.about'), about_path %>
   <% end %>
   <%= menu_group :pull => :right do %>
     <% if user_signed_in? %>
-      <%= menu_item "Edit Profile", edit_user_registration_path %>
-      <%= menu_item "Log Out", destroy_user_session_path, :method => :delete %>
+      <%= menu_item t('navigation.user.edit_profile'), edit_user_registration_path %>
+      <%= menu_item t('navigation.user.sign_out'), destroy_user_session_path, :method => :delete %>
     <% else %>
-      <%= menu_item "Sign Up", new_user_registration_path if BP_CONFIG['registration_is_enabled'] %>
-      <%= menu_item "Sign In", new_user_session_path %>
+      <%= menu_item t('navigation.user.sign_up'), new_user_registration_path if BP_CONFIG['registration_is_enabled'] %>
+      <%= menu_item t('navigation.user.sign_in'), new_user_session_path %>
     <% end %>
     <p class="navbar-right">
       <%= link_to "en", params.merge(locale: :en) %> | <%= link_to "de", params.merge(locale: :de) %>
