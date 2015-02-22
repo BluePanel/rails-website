@@ -41,6 +41,11 @@ de:
       translate: "Übersetzen"
       destroy: "Löschen"
       new: "Neu"
+    show:
+      back: "Zurück"
+      edit: "Bearbeiten"
+      transalte: "Übersetzen"
+      destroy: "Löschen"
     edit:
       title: "Bearbeite Artikel"
     new:
