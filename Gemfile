@@ -64,5 +64,7 @@ gem 'devise'
 gem 'cancancan', '~> 1.9'
 gem 'rolify'
 
+gem 'globalize', '~> 5.0.0'
+
 gem 'bb-ruby'
 gem 'will_paginate-bootstrap'
