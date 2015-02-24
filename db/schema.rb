@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150214214548) do
+ActiveRecord::Schema.define(version: 20150223231148) do
 
-  create_table "articles", force: true do |t|
+  create_table "articles", force: :cascade do |t|
     t.integer  "author_id"
     t.string   "title"
     t.text     "content"
@@ -23,16 +23,25 @@ ActiveRecord::Schema.define(version: 20150214214548) do
     t.string   "locale"
   end
 
-  create_table "projects", force: true do |t|
-    t.string   "name"
+  create_table "project_translations", force: :cascade do |t|
+    t.integer  "project_id",  null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.text     "description"
-    t.text     "description_de"
+  end
+
+  add_index "project_translations", ["locale"], name: "index_project_translations_on_locale"
+  add_index "project_translations", ["project_id"], name: "index_project_translations_on_project_id"
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
     t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "roles", force: true do |t|
+  create_table "roles", force: :cascade do |t|
     t.string   "name"
     t.integer  "resource_id"
     t.string   "resource_type"
@@ -43,7 +52,7 @@ ActiveRecord::Schema.define(version: 20150214214548) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -62,7 +71,7 @@ ActiveRecord::Schema.define(version: 20150214214548) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
-  create_table "users_roles", id: false, force: true do |t|
+  create_table "users_roles", id: false, force: :cascade do |t|
     t.integer "user_id"
     t.integer "role_id"
   end
