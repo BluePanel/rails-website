@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   respond_to :html
 
   def index
-    @articles = Article.where(:locale => I18n.locale).page(params[:page])
+    @articles = Article.page(params[:page])
     respond_with(@articles)
   end
 
@@ -15,13 +15,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    if (params[:original_id])
-      @original = Article.find_by_id(params[:original_id])
-      raise NotFoundError.new 'Original not found' if @original.nil?
-      @article = @original.translations.build
-    else
-      @article = Article.new({:locale => I18n.default_locale})
-    end
+    @article = Article.new
 
     respond_with(@article)
   end
@@ -52,6 +46,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:locale, :original_id, :title, :content)
+      params.require(:article).permit(:title, :content)
     end
 end

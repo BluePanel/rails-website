@@ -1,13 +1,9 @@
 class Article < ActiveRecord::Base
   resourcify
 
-  has_many :translations, :class_name => 'Article', :foreign_key => :original_id, :inverse_of => :original
-  belongs_to :original, :class_name => 'Article', :foreign_key => :original_id, :inverse_of => :translations
-
   belongs_to :author, :class_name => 'User', :foreign_key => :author_id
 
-  validates_uniqueness_of :original_id, scope: :locale, allow_blank: true
-  validates_presence_of :locale
+  translates :title, :content, :fallbacks_for_empty_translations => true
 
   default_scope { order('created_at DESC') }
 
@@ -18,6 +14,6 @@ class Article < ActiveRecord::Base
   end
 
   def self.latest_articles
-		where(:locale => I18n.locale).limit(BP_CONFIG['count_of_articles_on_index_page'])
+    limit(BP_CONFIG['count_of_articles_on_index_page'])
   end
 end

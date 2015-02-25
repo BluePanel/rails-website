@@ -15,43 +15,6 @@
     </div>
   <% end %>
 
-  <%if @original.nil? %>
-    <div class="control-group">
-      <%= f.label :locale, :class => 'control-label' %>
-      <div class="controls">
-        <%= @article[:locale] %>
-        <%= f.hidden_field :locale %>
-      </div>
-    </div>
-  <%else%>
-    <div class="control-group">
-      <%= f.label 'Original title', :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_field :title, :value => @original[:title], :disabled => true, :class => 'form-control' %>
-      </div>
-      <%= error_span(@original[:title]) %>
-    </div>
-
-    <div class="control-group">
-      <%= f.label 'Original content', :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_area :content, :value => @original[:content], :disabled => true, :class => 'form-control' %>
-      </div>
-      <%= error_span(@original[:content]) %>
-    </div>
-
-    <div class="field">
-      <%= f.hidden_field :original_id %>
-    </div>
-
-    <div class="control-group">
-      <%= f.label 'New locale', :class => 'control-label' %>
-      <div class="controls">
-        <%= f.select(:locale, options_for_select(['de'])) %>
-      </div>
-    </div>
-  <% end %>
-
   <div class="control-group">
     <%= f.label :title, :class => 'control-label' %>
     <div class="controls">
