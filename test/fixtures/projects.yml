@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  description: MyText
+#  description: MyText
   link: MyString
 
 two:
   name: MyString
-  description: MyText
+#  description: MyText
   link: MyString
