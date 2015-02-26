@@ -7,4 +7,4 @@ Ruby on Rails Project which will be hosted on {BluePanel.org}[http://bluepanel.o
 
 == System dependencies
 * Ruby >= 2.1 (but 2.2 is highly recommended)
-* Rails 4.1.7
+* Rails 4.2.0
