@@ -10,7 +10,11 @@ class Article < ActiveRecord::Base
   self.per_page = BP_CONFIG['articles_per_page']
 
   def content_preview
-      content.truncate(BP_CONFIG['article_preview_sign_length'])
+    content.truncate(BP_CONFIG['article_preview_sign_length']).bbcode_to_html_with_formatting unless content.nil?
+  end
+
+  def content_with_bbcode_and_formatting
+    content.bbcode_to_html_with_formatting unless content.nil?
   end
 
   def self.latest_articles
