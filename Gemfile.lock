@@ -84,6 +84,9 @@ GEM
     execjs (2.3.0)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
+    globalize (5.0.1)
+      activemodel (>= 4.2.0, < 4.3)
+      activerecord (>= 4.2.0, < 4.3)
     highline (1.7.1)
     hike (1.2.3)
     i18n (0.7.0)
@@ -220,6 +223,7 @@ DEPENDENCIES
   codeclimate-test-reporter
   coffee-rails (~> 4.0.0)
   devise
+  globalize (~> 5.0.0)
   highline
   jbuilder (~> 2.0)
   jquery-rails

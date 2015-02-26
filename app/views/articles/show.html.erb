@@ -5,7 +5,7 @@
 </div>
 
 <div class="articleBody">
-  <p><%= raw @article.content.bbcode_to_html_with_formatting %></p>
+  <p><%= raw @article.content_with_bbcode_and_formatting %></p>
 </div>
 <div class="articleButtons">
   <%= link_to t('.back', :default => t("helpers.links.back")),
@@ -13,10 +13,6 @@
   <% if can? :edit, @article %>
     <%= link_to t('.edit', :default => t("helpers.links.edit")),
                 edit_article_path(@article), :class => 'btn btn-default' %>
-  <% end %>
-  <% if (can? :translate, @article) && @article.original_id.nil? %>
-    <%= link_to t('.translate', :default => t("helpers.links.translate")),
-                new_article_path(original_id: @article.id), :class => 'btn btn-default' %>
   <% end %>
   <% if can? :destroy, @article %>
     <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

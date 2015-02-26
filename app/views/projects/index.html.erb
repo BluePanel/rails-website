@@ -15,7 +15,7 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= link_to project.name, project_path(project) %></td>
-        <td><%= project.localized_description %></td>
+        <td><%= project.description %></td>
         <td><%= project.link %></td>
         <td>
           <% if can? :edit, project %>

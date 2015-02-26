@@ -19,7 +19,8 @@ admin_user.save!
 project = Project.new
 project.name = 'BluePanel Website'
 project.description = 'The online presence of BluePanel.org'
-project.description_de = 'Die Webpräsenz von BluePanel.org'
 project.link = 'https://github.com/BluePanel/rails-website'
+I18n.locale = :de
+project.description = 'Die Webpräsenz von BluePanel.org'
 project.save!
 

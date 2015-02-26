@@ -4,7 +4,7 @@
 </div>
 
 <div class="project-section">
-  <p><%= @project.localized_description %></p>
+  <p><%= @project.description %></p>
   <p><%=t '.on_github', :default => 'Project on Github' %> <%= link_to @project.name, @project.link %></p>
 </div>
 
