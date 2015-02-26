@@ -4,7 +4,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
-gem 'sqlite3', group: [:development, :test]
+group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+end
 
 group :development do
   gem 'web-console', '~> 2.0'
