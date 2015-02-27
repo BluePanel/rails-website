@@ -52,6 +52,12 @@ de:
       title: "Neuer Artikel"
     form:
       cancel: "Abbrechen"
+      create: "Artikel erstellen"
+      title: "Titel"
+      content: "Inhalt"
+      errors:
+        one: "1 Fehler verhindert, dass der Artikel gespeichert wurde:"
+        other: "%{count} Fehler verhindern, dass der Artikel gespeichert wurde:"
   projects:
     index:
       title: "Projekte"
@@ -73,6 +79,12 @@ de:
       title: "Neues Projekt"
     form:
       cancel: "Abbrechen"
+      create: "Projekt erstellen"
+      name: "Projektname"
+      description: "Beschreibung"
+      errors:
+        one: "1 Fehler verhindert, dass das Projekt gespeichert wurde:"
+        other: "%{count} Fehler verhindern, dass das Projekt gespeichert wurde:"
   about:
     show:
       title: "Über uns"

@@ -9,6 +9,8 @@ en:
       pages: "Pages"
   helpers:
     actions: "Actions"
+    submit:
+      create: "Create %{model}"
     links:
       back: "Back"
       cancel: "Cancel"

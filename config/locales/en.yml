@@ -52,6 +52,12 @@ en:
       title: "New Article"
     form:
       cancel: "Cancel"
+      create: "Create article"
+      title: "Title"
+      content: "Content"
+      errors:
+        one: "1 error prohibited this article from being saved:"
+        other: "%{count} errors prohibited this article from being saved:"
   projects:
     index:
       title: "Projects"
@@ -73,6 +79,12 @@ en:
       title: "New Project"
     form:
       cancel: "Cancel"
+      create: "Create project"
+      name: "Project name"
+      description: "Description"
+      errors:
+        one: "1 error prohibited this project from being saved:"
+        other: "%{count} errors prohibited this project from being saved:"
   about:
     show:
       title: "About"
