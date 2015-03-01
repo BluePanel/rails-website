@@ -3,24 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #feed{
-	box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 .gha-header{
-	box-sizing: content-box;
-	width: calc(100% - 22px);
+  box-sizing: content-box;
+  width: calc(100% - 22px);
 }
 
 .gha-gravatar{
-	box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 .gha-footer{
-	box-sizing: content-box;
-    width: calc(100% - 17px);
-    border-bottom: 1px solid #DDD;
+  box-sizing: content-box;
+  width: calc(100% - 17px);
+  border-bottom: 1px solid #DDD;
+  border-top: none;
 }
 
 .gha-push-small{
-    display: none;
+  border: none;
 }
