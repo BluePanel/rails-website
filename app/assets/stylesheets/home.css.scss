@@ -17,4 +17,10 @@
 
 .gha-footer{
 	box-sizing: content-box;
+    width: calc(100% - 17px);
+    border-bottom: 1px solid #DDD;
+}
+
+.gha-push-small{
+    display: none;
 }
