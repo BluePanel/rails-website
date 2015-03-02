@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.bottom-dist{
+  margin-bottom: 400px;
+}

@@ -4,11 +4,12 @@
 
 #feed{
   box-sizing: content-box;
+  height: 500px;
 }
 
 .gha-header{
   box-sizing: content-box;
-  width: calc(100% - 22px);
+  width: calc(100% - 35px);
 }
 
 .gha-gravatar{
@@ -17,9 +18,8 @@
 
 .gha-footer{
   box-sizing: content-box;
-  width: calc(100% - 17px);
+  width: calc(100% - 30px);
   border-bottom: 1px solid #DDD;
-  border-top: none;
 }
 
 .gha-push-small{
