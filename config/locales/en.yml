@@ -68,8 +68,9 @@ en:
       edit: "Edit"
       destroy: "Destroy"
       new: "New"
+      on_github: "Project on GitHub"
     show:
-      on_github: "Project on Github:"
+      on_github: "Project on GitHub"
       back: "Back"
       edit: "Edit"
       destroy: "Destroy"

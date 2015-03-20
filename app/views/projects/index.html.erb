@@ -18,7 +18,7 @@
       <tr>
         <td><%= link_to project.name, project_path(project) %></td>
         <td><%= project.description %></td>
-        <td><%= project.link %></td>
+        <td><%= link_to t('.on_github', :default => 'View on GitHub'), project.link, class: 'btn btn-primary btn-xs' %></td>
         <% if can? (:edit || :destroy), project %>
           <td>
             <% if can? :edit, project %>
