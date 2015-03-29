@@ -1,7 +1,16 @@
 <% Article.latest_articles.each do |article| %>
-  <div class="articleBody">
-    <h2><%= link_to article.title, article_path(article) %></h2>
-    <div class="articleInfo" > <span class="articleAuthor" ><%= article.author.name %></span> <span class="articleDate"><%= article.created_at.strftime("%d, %b %Y - %H:%M") %></span> </div>
-    <p><%= raw article.content_preview %></p>
-  </div>
+  <article>
+    <div class="articleBody">
+      <header>
+        <h2><%= link_to article.title, article_path(article) %></h2>
+        <div class="articleInfo" > <span class="articleAuthor" ><%= article.author.name %></span> <span class="articleDate"><%= article.created_at.strftime("%d, %b %Y - %H:%M") %></span> </div>
+      </header>
+      <p><%= raw article.content_preview %></p>
+      <footer>
+        <p class="editedArticle">
+          <%= editedHelper(article) %>
+        </p>
+      </footer>
+    </div>
+  </article>
 <% end %>

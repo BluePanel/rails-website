@@ -34,6 +34,7 @@ de:
   home:
     index:
       latest_articles: "Neuste Artikel"
+      edited: "Zuletzt bearbeitet am"
   articles:
     index:
       title: "Artikel"
@@ -41,11 +42,13 @@ de:
       translate: "Übersetzen"
       destroy: "Löschen"
       new: "Neu"
+      edited: "Zuletzt bearbeitet am"
     show:
       back: "Zurück"
       edit: "Bearbeiten"
       transalte: "Übersetzen"
       destroy: "Löschen"
+      edited: "Zuletzt bearbeitet am"
     edit:
       title: "Bearbeite Artikel"
     new:

@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+article footer .editedArticle{
+  text-align: right;
+  color: #999999;
+  font-size: smaller;
+}
+
+article footer{
+  margin-bottom: 60px;
+}
 
 .articleInfo{
   margin-bottom: 20px;
@@ -26,6 +35,6 @@
 
 .articleButtons{
   margin-left: 15px;
-  margin-bottom: 60px;
 }
+
 
