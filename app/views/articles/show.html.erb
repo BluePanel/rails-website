@@ -2,7 +2,7 @@
 <article>
   <header class="page-header">
     <h1><%= @article.title %></h1>
-    <div class="articleInfoSingle" > <span class="articleAuthor" ><%= @article.author.name %></span> <span class="articleDate" ><%= @article.created_at.strftime("%d, %b %Y - %H:%M") %></span> </div>
+    <div class="articleInfoSingle" > <span class="articleAuthor" ><%= @article.author.name %></span> <span class="articleDate" ><%=l @article.created_at %></span> </div>
   </header>
 
   <div class="articleBody">
