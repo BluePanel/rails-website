@@ -7,11 +7,11 @@
 
   <div class="articleBody">
     <p><%= raw @article.content_with_bbcode_and_formatting %></p>
-    </div>
-    <footer>
-      <p class="editedArticle">
-        <%= editedHelper(@article) %>
-      </p>
+  </div>
+  <footer>
+    <p class="editedArticle">
+      <%= editedHelper(@article) %>
+    </p>
     <div class="articleButtons">
       <%= link_to t('.back', :default => t("helpers.links.back")),
                   articles_path, :class => 'btn btn-default'  %>
