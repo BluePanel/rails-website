@@ -20,6 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 de:
+  date:
+    month_names:
+      [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+  time:
+    formats:
+      default: "%e. %B %Y %H:%M"
   navigation:
     main:
       home: "Start"
