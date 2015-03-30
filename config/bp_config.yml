@@ -3,6 +3,7 @@ defaults: &defaults
   count_of_articles_on_index_page: 3
   article_preview_sign_length: 1000
   articles_per_page: 10
+  project_preview_sign_length: 150
 
 development:
   <<: *defaults
