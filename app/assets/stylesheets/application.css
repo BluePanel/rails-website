@@ -14,6 +14,6 @@
  *= require_self
  */
 
-.bottom-dist{
-  margin-bottom: 50px;
+.pageFooter{
+  height: 50px;
 }
