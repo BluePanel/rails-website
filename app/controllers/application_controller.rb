@@ -19,6 +19,11 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
+    I18n.locale = params[:locale] || get_locale_from_domain || I18n.default_locale
+  end
+
+  def get_locale_from_domain
+    locale = BP_CONFIG['localized_domains'][request.host]
+    I18n.available_locales.include?(locale.to_sym) ? locale : nil
   end
 end

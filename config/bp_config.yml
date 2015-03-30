@@ -5,6 +5,10 @@ defaults: &defaults
   articles_per_page: 10
   project_preview_sign_length: 150
 
+  localized_domains:
+    'bluepanel.org': en
+    'bluepanel.de': de
+
 development:
   <<: *defaults
   registration_is_enabled: true
