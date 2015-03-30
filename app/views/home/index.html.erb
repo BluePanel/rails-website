@@ -1,16 +1,1 @@
-<% Article.latest_articles.each do |article| %>
-  <article>
-    <div class="articleBody">
-      <header>
-        <h2><%= link_to article.title, article_path(article) %></h2>
-        <div class="articleInfo" > <span class="articleAuthor" ><%= article.author.name %></span> <span class="articleDate"><%=l article.created_at %></span> </div>
-      </header>
-      <p><%= raw article.content_preview %></p>
-      <footer>
-        <p class="editedArticle">
-          <%= editedHelper(article) %>
-        </p>
-      </footer>
-    </div>
-  </article>
-<% end %>
+<%= render Article.latest_articles, :locals => { :preview => true } %>
