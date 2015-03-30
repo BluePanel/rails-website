@@ -37,21 +37,21 @@ en:
   home:
     index:
       latest_articles: "Latest Articles"
-      edited: "Last edited at"
   articles:
+    article:
+      edited: "Last edited at "
     index:
       title: "Articles"
       edit: "Edit"
       translate: "Translate"
       destroy: "Destroy"
       new: "New"
-      edited: "Last edited at"
     show:
       back: "Back"
       edit: "Edit"
       translate: "Translate"
       destroy: "Destroy"
-      edited: "Last edited at"
+      edited: "Last edited at "
     edit:
       title: "Edit Article"
     new:
