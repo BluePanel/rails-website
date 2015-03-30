@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def get_locale_from_domain
-    locale = BP_CONFIG['localized_domains'][request.host]
+    locale = BP_CONFIG['localized_domains'][request.host] || ""
     I18n.available_locales.include?(locale.to_sym) ? locale : nil
   end
 end
