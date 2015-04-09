@@ -98,7 +98,15 @@ de:
   about:
     show:
       title: "Über uns"
+      who_heading: "Wer sind wir?"
+      who_content: "Wir sind ein Zusammenschluss von Freunden, die Informatik studieren und schon seit längerem Freie- und Open-Source-Software nutzen und entwickeln."
+      what_heading: "Was wollen wir?"
+      what_content: "Wir wollen Freie- und Open-Source-Software unterstützen, verbessern und entwickeln.
+        Wir finden Software sollte wie Wissen frei zugänglich sein, so wie es das Zitat „Das Wissen der Menschheit gehört der Welt“ aus dem Film „Startup“ passend beschreibt.
+        Mit BluePanel wollen wir unseren Beitrag zur aktuellen und auch zukünftigen Entwicklung von Freier- und Open-Source-Software leisten."
+      bp_heading: "Was ist BluePanel?"
+      bp_content: "BluePanel ist eine Plattform für Artikel und Projekte über Freie- und Open-Source-Software. Wir werden auf BluePanel unsere gemeinsamen, aber auch individuelle Projekte unserer Mitglieder veröffentlichen."
+      contact: "Kontakt"
       admins: "Administratoren"
       global_mods: "Globale Moderatoren"
       developers: "Entwickler"
-      contact: "Kontakt"

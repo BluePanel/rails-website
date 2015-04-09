@@ -2,6 +2,19 @@
   <h1><%=t '.title', :default => 'About' %></h1>
 </div>
 
+<h3><%=t '.who_heading', :default => 'Who are we?' %></h3>
+<p><%=t '.who_content', :default => '' %></p>
+
+<h3><%=t '.what_heading', :default => 'What do we want?' %></h3>
+<p><%=t '.what_content', :default => '' %></p>
+
+<h3><%=t '.bp_heading', :default => 'What is BluePanel?' %></h3>
+<p><%=t '.bp_content', :default => '' %></p>
+
+<h2><%=t '.contact', :default => 'Contact' %></h2>
+<p>Mail: <%= mail_to 'info@bluepanel.org', 'info[AT]bluepanel[DOT].org' %>
+<p>IRC: <%= link_to '#bluepanel', 'irc://irc.freenode.net/#bluepanel' %></p>
+
 <div class="adminList">
   <h3><%=t '.admins', :default => 'Administrators' %></h3>
   <% @admins.each do |admin| %>
@@ -28,7 +41,3 @@
     </div>
   <% end %>
 </div>
-
-<h2><%=t '.contact', :default => 'Contact' %></h2>
-<p>Mail: <%= mail_to 'info@bluepanel.org', 'info[AT]bluepanel[DOT].org' %>
-<p>IRC: <%= link_to '#bluepanel', 'irc://irc.freenode.net/#bluepanel' %></p>

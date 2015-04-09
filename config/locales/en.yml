@@ -95,7 +95,15 @@ en:
   about:
     show:
       title: "About"
+      who_heading: "Who are we?"
+      who_content: "We are an association of friends which are studying computer science and are using and developing free and open source software for a long time."
+      what_heading: "What do we want?"
+      what_content: "We want to support, enhance and develop free and open source software.
+        We think software should be freely avialable like knowledge, because “Human knowledge belongs to the world.“ (Extracted from movie 'Antitrust').
+        With BluePanel we want to make our contribution to current and future development of free and open source software."
+      bp_heading: "What is BluePanel?"
+      bp_content: "BluePanel is a platform for articles and projects about free and open source software. We will publish our collabarative but also individual projects of our members on BluePanel."
+      contact: "Contact"
       admins: "Administrators"
       global_mods: "Global Moderators"
       developers: "Developers"
-      contact: "Contact"
