@@ -12,10 +12,10 @@
 @fontAwesomeSvgPath: font-url("fontawesome-webfont.svg#fontawesomeregular");
 
 // Font Awesome
-@import "fontawesome/font-awesome";
+//@import "fontawesome/font-awesome";
 
 // Glyphicons
-//@import "twitter/bootstrap/glyphicons.less";
+@import "twitter/bootstrap/glyphicons.less";
 
 // Your custom LESS stylesheets goes here
 //
@@ -68,4 +68,14 @@
   -webkit-box-shadow: 0px 5px 3px #FE2E2E;
   -moz-box-shadow: 0px 5px 3px #FE2E2E;
   box-shadow: 0px 5px 3px #FE2E2E;
+}
+
+.dropdown-menu{
+  min-width: 91.2px;
+}
+
+@media (max-width: 767px){
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a{
+    color: #ffffff;
+  }
 }
