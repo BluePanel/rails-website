@@ -16,18 +16,11 @@
 
     <li class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <%= image_tag('globe_16.png') %>
-        |
-        <%= I18n.locale %>
-        <b class="caret"></b>
+        <%= image_tag('globe_16.png') %> | <%= I18n.locale %> <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
-        <li>
-          <%= link_to "en", params.merge(locale: :en) %>
-        </li>
-        <li>
-          <%= link_to "de", params.merge(locale: :de) %>
-        </li>
+        <li><%= link_to "en", params.merge(locale: :en) %></li>
+        <li><%= link_to "de", params.merge(locale: :de) %></li>
       </ul>
     </li>
 
