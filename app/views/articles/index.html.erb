@@ -5,7 +5,7 @@
 
 <section>
   <%= render @articles.first %>
-  <%= render @articles[1...-1], :locals => { :preview => true } %>
+  <%= render @articles[1..-1], :locals => { :preview => true } %>
 </section>
 
 <% if can? :create, Article %>
