@@ -10,7 +10,7 @@ group :development do
   gem 'web-console', '~> 2.0'
 
   gem 'capistrano-rails'
-  gem 'capistrano-rvm'
+#  gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   
