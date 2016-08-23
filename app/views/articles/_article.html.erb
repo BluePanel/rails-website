@@ -1,17 +1,13 @@
 <article>
+  <header>
+    <h1><%= link_to article.title, article_path(article) %></h1>
+    <div class="articleInfo" >
+      <span class="articleAuthor" ><%= article.author.name %></span>
+      <span class="articleDate" ><%=l article.created_at %></span>
+    </div>
+  </header>
   <div class="articleBody">
-    <header>
-      <h1><%= link_to article.title, article_path(article) %></h1>
-      <div class="articleInfo" >
-        <span class="articleAuthor" ><%= article.author.name %></span>
-        <span class="articleDate" ><%=l article.created_at %></span>
-      </div>
-    </header>
-    <% if defined?(locals) && locals[:preview] %>
-      <p><%= raw article.content_preview %></p>
-    <% else %>
-      <p><%= raw article.content_with_bbcode_and_formatting %></p>
-    <% end %>
+    <%= (defined?(locals) && locals[:preview]) ? raw(article.content_preview) : raw(article.content_with_bbcode_and_formatting) %>
   </div>
   <footer class="articleBottomMargin">
     <p class="editedArticle">

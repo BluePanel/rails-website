@@ -4,9 +4,8 @@
     <h1><%= @article.title %></h1>
     <div class="articleInfoSingle" > <span class="articleAuthor" ><%= @article.author.name %></span> <span class="articleDate" ><%=l @article.created_at %></span> </div>
   </header>
-
   <div class="articleBody">
-    <p><%= raw @article.content_with_bbcode_and_formatting %></p>
+    <%= raw @article.content_with_bbcode_and_formatting %>
   </div>
   <footer class="articleBottomMargin">
     <p class="editedArticle">
