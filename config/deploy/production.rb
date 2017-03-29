@@ -7,10 +7,11 @@ set :branch, 'master'
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-role :app, %w{deploy@bluepanel.org}
-role :web, %w{deploy@bluepanel.org}
-role :db,  %w{deploy@bluepanel.org}, :primary => true
+role :app, %w{wiegand@schedar.uberspace.de}
+role :web, %w{wiegand@schedar.uberspace.de}
+role :db,  %w{wiegand@schedar.uberspace.de}, :primary => true
 
+set :deploy_to, '/var/www/virtual/wiegand/rails/rails-website'
 
 # Extended Server Syntax
 # ======================

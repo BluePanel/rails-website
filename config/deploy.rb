@@ -8,7 +8,7 @@ set :repo_url, 'https://github.com/BluePanel/rails-website.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/var/www/vhosts/bluepanel.org/rails-website'
+set :deploy_to, '/var/www/virtual/wiegand/rails/rails-website'
 
 # Default value for :scm is :git
 set :scm, :git
@@ -35,25 +35,21 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 # set :keep_releases, 5
 
 namespace :deploy do
-  
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
+  desc "Restart service"
+  task :restart do
+    on roles(:all) do
+      execute :svc, '-du ~/service/rails-website'
     end
   end
-  
 end
 
 namespace :print do
-  
 	desc "Print environment variables"
   task :environment do
     on roles(:all) do
       execute :printenv
     end
   end
-
 end
+
+after 'deploy', 'deploy:restart'
