@@ -1,24 +1,20 @@
 language: ruby
 rvm:
-  - 2.1
-  - 2.2
-
+- 2.1
+- 2.2
 gemfile:
 - Gemfile
-
 sudo: false
-
 cache: bundler
-
 script: bundle exec rake test
-
 notifications:
   email:
   - webdevs@bluepanel.org
   irc:
   - chat.freenode.net#bluepanel
   use_notice: true
-
+  slack:
+    secure: RHJzHdhnJxz11OnbeN/D20AU8bk14VRivh/BUOv72CaUtfbGF/WNIEefwAINOnWecK4j40Fv0Yf/WdyfDmgxhb5ZRP3gA+icb6k0ueJgXftyV3pKXI4By9qEqCgpf7LgfQJlDoZeuzJjm6znMI9rWsgbOjueVQQixbapiIwToGM=
 addons:
   code_climate:
     repo_token:
