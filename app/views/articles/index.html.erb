@@ -4,8 +4,10 @@
 </div>
 
 <section>
-  <%= render @articles.first %>
-  <%= render @articles[1..-1], :locals => { :preview => true } %>
+  <% if @articles.exists? %>
+    <%= render @articles.first %>
+    <%= render @articles[1..-1], :locals => { :preview => true } %>
+  <% end %>
 </section>
 
 <% if can? :create, Article %>
